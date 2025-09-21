@@ -1,0 +1,22 @@
+# Python cache/compiled
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+*.egg-info/
+
+# Logs & temp
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+Thumbs.db
