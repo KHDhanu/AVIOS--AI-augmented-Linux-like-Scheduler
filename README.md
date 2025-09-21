@@ -75,7 +75,7 @@ Example (turnaround times):
   - Execution Length → Short / Medium / Long  
   - Priority → High / Medium / Low  
 - **Score-based Scheduling Enhancements**:  
-  - Scheduler assignment (Realtime → FIFO, Interactive/Short → RR, Others → CFS)  
+  - **Scheduler assignment** (Realtime → FIFO, Interactive/Short → RR, Others → CFS)  
   - CFS **vruntime scaling** for high-score tasks  
   - RR/CFS **quantum scaling** based on task profile  
 
@@ -96,7 +96,6 @@ docs/ # Report, slides, diagrams, ablation study
 scripts/ # Analysis/statistical testing scripts
 tests/ # Basic unit tests
 
-
 ### Datasets / Traces
 
 - **Mixed realistic trace (1,227 tasks)** → included in this repo (`datasets/mixed_realistic_workload.csv`).  
@@ -104,7 +103,6 @@ tests/ # Basic unit tests
   📂 Download link: [Google Drive Datasets](https://drive.google.com/drive/folders/1StTN6ZuV-hEf2z6RSj3fCP6tR2DM4plA?usp=sharing)  
 
 After downloading, place the CSVs inside the `datasets/` folder before running notebooks or simulations.
-
 
 ---
 
@@ -123,53 +121,64 @@ conda activate avios
 chmod +x run_demo.sh
 ./run_demo.sh
 
+``` 
 
 Or step through the notebooks in order:
 
-Part1 → Manual task classification
+- Part1 → Manual task classification
 
-Part2 → Train ML models
+- Part2 → Train ML models
 
-Part3 → Compare AI vs Linux baseline schedulers
+- Part3 → Compare AI vs Linux baseline schedulers
 
 👉 Note: Pre-trained models & encoders are included in /src/models (no retraining required).
 
-🧪 Ablation Study
+---
+
+### 🧪 Ablation Study
 
 Experiments show contributions of:
 
-Scheduler assignment only
+- Scheduler assignment only
 
-Quantum & vruntime scaling only
+- Quantum & vruntime scaling only
 
-Combined (largest improvements)
+- Combined (largest improvements)
 
 📂 See /results/ablation_study_results.pdf
 
-⚠️ Notes & Limitations
+---
 
-Research prototype (not a kernel patch).
+## ⚠️ Notes & Limitations
 
-Datasets = ~900–1400 tasks/workload (mixed realistic: 1227 tasks).
+- Research prototype (not a kernel patch).
 
-Models trained offline; classification happens at admission time.
+- Datasets = ~900–1400 tasks/workload (mixed realistic: 1227 tasks).
 
-More diversity in traces = stronger external validity.
+- Models trained offline; classification happens at admission time.
 
-🔮 Future Work
+- More diversity in traces = stronger external validity.
 
-Collect larger & real-world workload traces
+---
 
-Explore Linux kernel integration
+## 🔮 Future Work
 
-Adaptive online learning (dynamic scheduling policies)
+- Collect larger & real-world workload traces
 
-📬 Contact
+- Explore Linux kernel integration
+
+- Adaptive online learning (dynamic scheduling policies)
+
+---
+
+## 📬 Contact
 
 Author: Dhanushree K
 📧 khdhanu5243@gmail.com
 
-🔗 LinkedIn : https://www.linkedin.com/in/dhanushree-k-9135122ab/
+🔗 [LinkedIn](https://www.linkedin.com/in/dhanushree-k-9135122ab/)
 
-💻 GitHub : https://github.com/KHDhanu
+💻 [GitHub](https://github.com/KHDhanu)
+
+---
 

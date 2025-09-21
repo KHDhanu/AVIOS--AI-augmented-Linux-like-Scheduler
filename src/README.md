@@ -1,8 +1,3 @@
-
----
-
-### 📂 `src/README.md`
-```markdown
 # Source Code
 
 This folder contains the main implementation of AVIOS.
@@ -15,3 +10,4 @@ This folder contains the main implementation of AVIOS.
 Entry points:
 - `src/scheduler/ai_simulator.py` – Run AI-augmented scheduler.
 - `src/scheduler/linux_simulator.py` – Run Linux baseline scheduler.
+
